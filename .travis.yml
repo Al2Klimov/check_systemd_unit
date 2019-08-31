@@ -1,0 +1,24 @@
+language: go
+
+go:
+  - "1.x"
+  - master
+
+before_script:
+  - curl -LSso "${GOPATH}/bin/dep" https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-amd64
+  - chmod +x "${GOPATH}/bin/dep"
+
+script:
+  - dep ensure
+  - .travis-ci/compile.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: l5Bpnixh8TYd2Qh9EV+U8jDwBMuonjrVO0Lf8nJn0ObvfI0BDAp7ScH6UiqDK8yds6o/bBWu2aT5Y4ZNMTs7SS1FVvzSVA8bTXqHENlNfu5UZts0yO6FGr5KyUxMefhq7MPcoCQuk++PHDEmlRJLL6fnnHFaoibTJ5psdWyQkRxXJviT6AAS8q4YMw566gKsZj8dzX4kybfwHL2DoNVDI1PfZLupA6QoWTMMCLYRXMCIsgjBZNGhMh8UC7HcDgqUMOUc7ODOxrDrG63S39D5/z/W1sIJuqtr1CL1tSwHCBAMXIdbzaR2vgjLoYfwSVyIv8Ugk21UZv+4TOC9nsgVo0CR7wsQrCQThucSESAJUWokDDYbwypA4gXJaWsRPEtZO3JYr8W4UsnKTvW4OTjtJVsExBmvEaqixyALgfu8bb2eOv7GWrxFD9fr0xYn+fE/FUiYiIm/bCY1aF8ovfBI/hbVRC/2LKHUyIfrpGcRsXYjAOZ1EjwZig/xzCmw/jTV9J3TBSC+v0H9Lsct3UaFX3E3t88oDPkIxsid6rEvI2ESga75DJIYO/lC5Gu3nM07Z11epDtOAGLv2iv3VS+DiCbF1WXWgQXcytTNlM6+LQ9g8bMBBjWkFXzci11wCDNFUmz4B8FcBD2Mkq3lwYi26hZqauipumd30A7Qz9fUXUE=
+  file_glob: true
+  file: check_*.*-*
+  skip_cleanup: true
+  on:
+    tags: true
+    go: "1.x"
