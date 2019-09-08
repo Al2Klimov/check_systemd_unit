@@ -17,7 +17,7 @@ UNIT is the systemd unit to monitor, e.g. `icinga2.service`.
 
 PROPERTY(THRESHOLD) specifies a numeric unit property and
 an alert threshold range conforming to the [Nagio$ check plugin API],
-e.g. `-warn NRestarts(@~:42)` warns if the unit's NRestarts are >42.
+e.g. `-warn NRestarts(@~:42)` warns if the unit's NRestarts are <= 42.
 
 JS_EXPR is an alert condition written in [JavaScript],
 e.g. `-js-crit ActiveState==="active"` returns status critical
