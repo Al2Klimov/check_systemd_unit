@@ -43,8 +43,8 @@ func checkSystemdUnit() (output string, perfdata PerfdataCollection, errs map[st
 
 	cli.Var(thresholdsWarn, "warn", "e.g. NRestarts(@~:42)")
 	cli.Var(thresholdsCrit, "crit", "e.g. NRestarts(@~:42)")
-	cli.Var(&jsWarn, "js-warn", `e.g. ActiveState==="active""`)
-	cli.Var(&jsCrit, "js-crit", `e.g. ActiveState==="active""`)
+	cli.Var(&jsWarn, "js-warn", `e.g. ActiveState==="active"`)
+	cli.Var(&jsCrit, "js-crit", `e.g. ActiveState==="active"`)
 
 	if errCli := cli.Parse(os.Args[1:]); errCli != nil {
 		os.Exit(3)
