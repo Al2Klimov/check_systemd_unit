@@ -74,8 +74,14 @@ func checkSystemdUnit() (output string, perfdata PerfdataCollection, errs map[st
 
 	for k, v := range props {
 		if num, signed, isNum := number2float(v); isNum {
+			var uom string
+			if strings.HasSuffix(k, "USec") {
+				uom = "us"
+			}
+
 			perfdata = append(perfdata, Perfdata{
 				Label: k,
+				UOM:   uom,
 				Value: num,
 				Warn:  thresholdsWarn[k],
 				Crit:  thresholdsCrit[k],
