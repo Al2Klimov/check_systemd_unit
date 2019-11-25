@@ -1,4 +1,4 @@
-//go:generate go run vendor/github.com/Al2Klimov/go-gen-source-repos/main.go github.com/Al2Klimov/check_systemd_unit
+//go:generate go run github.com/Al2Klimov/go-gen-source-repos
 
 package main
 
@@ -7,9 +7,8 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	_ "github.com/Al2Klimov/go-gen-source-repos"
 	. "github.com/Al2Klimov/go-monplug-utils"
-	"github.com/coreos/go-systemd/dbus"
+	"github.com/coreos/go-systemd/v22/dbus"
 	js "github.com/robertkrimen/otto"
 	"html"
 	"os"
