@@ -9,5 +9,6 @@ require (
 	github.com/coreos/go-systemd/v22 v22.1.0
 	github.com/robertkrimen/otto v0.0.0-20180617131154-15f95af6e78d
 	golang.org/x/crypto v0.0.0-20191122220453-ac88ee75c92c // indirect
+	golang.org/x/sys v0.0.0-20210317091845-390168757d9c // indirect
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
 )
