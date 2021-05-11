@@ -1,3 +1,5 @@
+github.com/Al2Klimov/go-gen-source-repos v0.0.0-20191012103425-993a7199781c h1:Cj6JIOX7kXMv0kK+GLej9gthif7phbuXjJCrjs/s/S4=
+github.com/Al2Klimov/go-gen-source-repos v0.0.0-20191012103425-993a7199781c/go.mod h1:l5fESJQgkQ1xeQjuPK9uEUKF/mTq6WPsPBOgu050BAY=
 github.com/Al2Klimov/go-monplug-utils v0.0.0-20190614130920-37501b5dec90 h1:wOD9k6e1cckSR4ijHvbEEVX4Ess4Rjd5ndh+UIeifRU=
 github.com/Al2Klimov/go-monplug-utils v0.0.0-20190614130920-37501b5dec90/go.mod h1:mqQ7FPnSDnJLHYOPUpIAV+2TjwXq4wS72W6DALbJEgM=
 github.com/Al2Klimov/go-test-utils v0.0.0-20181021140159-44f0ba1d3916 h1:DyVam1rJSzV06Rgs+/m2PlVkJ4w++/rfrorCKMjZJSw=
